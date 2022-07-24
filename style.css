@@ -3,9 +3,9 @@
 :root {
     --login-bg: rgba(255, 255, 255, 0.2);
     --title-bg: white;
-    --button-bg: rgba(0, 8, 255, 0.726);
-    --image-bg:  #ffffff2d ;
-    --blue: #1521ff;
+    --button-bg: rgba(0, 8, 255, 0.799);
+    --image-bg: #ffffff2d;
+    --blue: #000dff;
 }
 
 * {
@@ -17,7 +17,11 @@
 body {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(to top, #1d19ff 0%, #ff2424 100%);
+    /* background-image: linear-gradient(to top, #1d19ff 0%, #ff2424 100%); */
+    /* background: linear-gradient(45deg, red, blue); */
+    background-image: url("./src/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,10 +48,10 @@ body {
 }
 
 .image-container {
-    padding: 2rem;
+    padding: 3rem;
     width: 50%;
     background-color: var(--image-bg);
-    box-sizing: border-box;
+    object-fit: scale-down;
 }
 
 .title {
@@ -58,53 +62,22 @@ body {
     color: var(--title-bg);
 }
 
-.social-login {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    cursor: pointer;
-}
-
-.social-login-element {
-    width: 12.5rem;
-    height: 3.75rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    border-radius: 5px;
-    border: 1px solid var(--button-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-login-element img {
-    width: 1.875rem;
-    height: 1.875rem;
-    position: relative;
-    top: 0;
-    left: -0.625rem;
-}
-
-.social-login-element:hover {
-    background-color: #fff;
-}
-
-.login-info-container > p {
+.login-info-container>p {
     font-size: 1.25em;
     margin-top: 1.5em;
 }
 
 .inputs-container {
-    height: 55%;
     width: 85%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.input, .btn {
+.input,
+.btn {
     width: 90%;
     height: 3.125rem;
     font-size: 1em;
@@ -138,32 +111,31 @@ body {
     background-color: rgba(255, 25, 0, 0.6);
 }
 
-.inputs-container p {
-    margin: 0;
-}
-
 .span {
     color: var(--blue);
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .span:hover {
     color: rgba(255, 25, 0, 0.6);
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1000px) {
     .login-container {
         width: 70%;
     }
+
     .login-info-container {
         width: 100%;
         border-radius: 5px;
     }
-    
+
     .image-container {
         display: none;
-    }  
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -183,13 +155,7 @@ body {
         height: 30%;
     }
 
-    .login-info-container > p {
+    .login-info-container>p {
         margin: 0;
     }
 }
-
-
-
-
-
-
