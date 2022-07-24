@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-    --login-bg: rgba(255, 255, 255, 0.2);
+    --login-bg: rgba(255, 255, 255, 0.3);
     --title-bg: white;
     --button-bg: rgba(0, 8, 255, 0.799);
-    --image-bg: #ffffff2d;
+    --image-bg: rgba(255, 255, 255, 0.15);
     --blue: #000dff;
+    --red: rgba(255, 25, 0, 0.8);
 }
 
 * {
@@ -34,6 +35,7 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.299);
 }
 
 .login-info-container {
@@ -76,6 +78,10 @@ body {
     align-items: center;
 }
 
+.login-info-container>img {
+    max-width: 50px;
+}
+
 .input,
 .btn {
     width: 90%;
@@ -96,6 +102,11 @@ body {
     border: 2px solid var(--button-bg);
 }
 
+.input:focus {
+    outline: 2px solid var(--button-bg);
+}
+
+
 .btn {
     width: 80%;
     letter-spacing: 1px;
@@ -108,7 +119,7 @@ body {
 }
 
 .btn:hover {
-    background-color: rgba(255, 25, 0, 0.6);
+    background-color: var(--red);
 }
 
 .span {
@@ -119,13 +130,13 @@ body {
 }
 
 .span:hover {
-    color: rgba(255, 25, 0, 0.6);
-    text-decoration: underline;
+    color: var(--red);
 }
 
 @media screen and (max-width: 1000px) {
     .login-container {
         width: 70%;
+        height: 90%;
     }
 
     .login-info-container {
@@ -141,6 +152,7 @@ body {
 @media screen and (max-width: 650px) {
     .login-container {
         width: 90%;
+        height: 90%;
     }
 }
 
